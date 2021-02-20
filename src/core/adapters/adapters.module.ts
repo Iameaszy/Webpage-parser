@@ -4,7 +4,7 @@ import { PuppeteerAdapter } from './puppeteer/Puppeteer';
 
 @Module({
     imports: [CacheModule.register()],
-    providers: [AdapterService,PuppeteerAdapter],
-    exports: [ PuppeteerAdapter]
+    providers: [AdapterService, PuppeteerAdapter],
+    exports: [PuppeteerAdapter, AdapterService],
 })
-export class AdaptersModule { }
+export class AdaptersModule {}
