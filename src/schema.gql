@@ -2,12 +2,16 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Query {
-  parseUrl(url: String!): UrlParserOutput!
+type Mutation {
+  parseUrl(url: String!): webpageParserOutput!
 }
 
-type UrlParserOutput {
-  desciption: String!
-  largestImageLink: String!
+type Query {
+  sayHello: String!
+}
+
+type webpageParserOutput {
+  description: String!
+  largestImage: String!
   title: String!
 }
