@@ -1,0 +1,2 @@
+export const SIGNUP_TOKEN_EXPIRY = 60 * 60
+export const RESET_ADMIN_TOKEN_EXPIRY = 60 * 15
