@@ -22,7 +22,10 @@ export class PuppeteerAdapter {
         console.log('parsed url from cachec', parsedUrl);
         if (parsedUrl) return parsedUrl;
 
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        });
         const newPage = await browser.newPage();
         await newPage.setDefaultNavigationTimeout(0);
         await newPage.goto(url);

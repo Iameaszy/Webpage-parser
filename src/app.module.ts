@@ -6,6 +6,7 @@ import configuration from './config/configurations';
 import { AppService } from './app.service';
 import { webpageParserModule } from './core/modules/WebpageParser/WebpageParser.module';
 import { AdaptersModule } from './core/adapters/adapters.module';
+import { AppController } from './app.controller';
 
 @Module({
     imports: [
@@ -20,8 +21,11 @@ import { AdaptersModule } from './core/adapters/adapters.module';
             autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
             sortSchema: true,
             installSubscriptionHandlers: true,
+            playground: true,
+            introspection: true,
         }),
     ],
+    controllers: [AppController],
     providers: [AppService],
 })
 export class AppModule {}
